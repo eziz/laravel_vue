@@ -48,5 +48,14 @@ p
 ##
  php artisan db:seed
 
- ## tinker
-  App\Models\Product::all()
+## tinker all products
+ App\Models\Product::all()
+
+ ## tinker all categories
+
+ App\Models\Product::with('categories')->get();
+
+  ## API
+  php artisan make:controller Api/ProductController
+
+  php artisan make:controller Api/UserController
