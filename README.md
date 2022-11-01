@@ -1,11 +1,9 @@
+## migration
 php artisan make:model Product --migration
-
 php artisan make:model Category --migration
-
 php artisan make:model Order --migration
 
 php artisan make:migration create_order_product_table --table=order_product
-
 php artisan make:migration create_category_product_table --table=category_product
 
 ## php artisan tinker
@@ -24,7 +22,6 @@ zip_code: "15275",
 
 ## Factory
 php artisan make:factory ProductFactory --model=Factory
-
 php artisan make:factory CategoryFactory --model=Category
 
 ## php artisan tinker
@@ -51,6 +48,5 @@ p
  App\Models\Product::all()
 
  ## tinker all categories
-
  App\Models\Product::with('categories')->get();
 
