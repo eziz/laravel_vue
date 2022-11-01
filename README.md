@@ -8,7 +8,7 @@ php artisan make:migration create_order_product_table --table=order_product
 
 php artisan make:migration create_category_product_table --table=category_product
 
-php artisan tinker
+## php artisan tinker
 ->$user=App\Models\User::factory()->make();
 
 App\Models\User {#3618
@@ -23,19 +23,18 @@ zip_code: "15275",
 }
 
 ## Factory
-
 php artisan make:factory ProductFactory --model=Factory
 
 php artisan make:factory CategoryFactory --model=Category
 
-php artisan tinker
+## php artisan tinker
 ->$category=App\Models\Category::factory()->make();
 => App\Models\Category {#3618
 name: "Management",
 slug: "management",
 }
 
-->$product=App\Models\Product::factory()->make();
+## ->$product=App\Models\Product::factory()->make();
 
 => App\Models\Product {#3613
 name: "Leffler, Gleason and ConsidineShirt",
@@ -45,7 +44,7 @@ air of great relief. 'Now.",
 p
 
 
-##
+## Database seed
  php artisan db:seed
 
 ## tinker all products
@@ -55,7 +54,3 @@ p
 
  App\Models\Product::with('categories')->get();
 
-  ## API
-  php artisan make:controller Api/ProductController
-
-  php artisan make:controller Api/UserController
